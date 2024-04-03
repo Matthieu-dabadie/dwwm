@@ -1,0 +1,111 @@
+.blocSearch {
+    margin-bottom: 15%;
+}
+
+main {
+    padding: 1%;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-bubble {
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.article-left {
+    float: left;
+}
+
+.article-right {
+    float: right;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.article-bubble {
+    transition: transform 0.3s ease-in-out;
+}
+
+.article-bubble:hover {
+    transform: scale(1.03);
+}
+
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Assure un espacement uniforme */
+    gap: 20px;
+    /* Espacement entre les éléments */
+}
+
+.news-bubble {
+    flex: 1;
+    /* Permet aux éléments de s'étendre pour occuper l'espace disponible */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--bg-color, #ffffff);
+    /* Utilisez des variables CSS ou les styles en ligne comme vous l'avez */
+    opacity: var(--opacity, 1);
+    border: 2px solid var(--frame-color, #000000);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile pour la profondeur */
+    transition: all 0.3s ease;
+    /* Transition douce pour hover */
+    max-width: calc(50% - 20px);
+    /* Ajustement pour 2 colonnes avec gap */
+}
+
+.news-bubble:hover {
+    transform: translateY(-5px);
+    /* Légère élévation au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre plus prononcée au survol */
+}
+
+/* menu mobile */
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Change la couleur du bord si nécessaire */
+}
+
+.navbar-toggler .icon-bar {
+    background-color: white;
+    /* Pour des barres personnalisées */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+@media (max-width: 768px) {
+    .news-bubble {
+        max-width: 100%;
+        /* Pleine largeur pour les petits écrans */
+    }
+}
+
+
+@media (min-width: 992px) {
+    .input-desktop-width {
+        width: 50% !important;
+    }
+
+
+}
